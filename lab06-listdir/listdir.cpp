@@ -19,8 +19,9 @@ int main() {
 
         //dfs();                     	// запустить обход в глубину
 		do {
-			count++; // некоторые файлы не считаются??
-			wprintf(L"file #%d is <%s>\n", count, fileinfo.cFileName);
+			count++;
+			if (count > 2)
+				wprintf(L"file #%d is <%s>\n", count, fileinfo.cFileName);
 
 			// ...
 			// здесь будет обход в глубину
