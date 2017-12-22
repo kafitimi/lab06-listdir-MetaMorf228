@@ -21,13 +21,13 @@ int main() {
 		do {
 			count++;
 			if (count > 2)
-				wprintf(L"file #%d is <%s>\n", count, fileinfo.cFileName);
+				wprintf(L"file #%d is <%s>\n", count-2, fileinfo.cFileName);
 
 			// ...
 			// здесь будет обход в глубину
 		} while (FindNextFile(hFind, &fileinfo) != 0);
 		FindClose(hFind);
-    	wprintf(L"File count = %d\n", count);
+    	wprintf(L"File count = %d\n", count-2);
     	return 0;
 }
 
